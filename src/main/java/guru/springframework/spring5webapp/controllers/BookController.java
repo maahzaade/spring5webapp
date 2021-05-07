@@ -20,9 +20,7 @@ public class BookController {
     @RequestMapping("/books")
     public String getBooks(Model model){
 
-        System.out.println("((((((((((((((");
         model.addAttribute("books", bookRepository.findAll());
-        System.out.println("}}}}"+bookRepository.findAll().iterator().hasNext());
 
         return "books/list";
     }

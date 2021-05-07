@@ -20,9 +20,7 @@ public class AuthorController {
     @RequestMapping("/authors")
     public String getBooks(Model model){
 
-        System.out.println("((((((((((((((");
         model.addAttribute("authors", authorRepository.findAll());
-        System.out.println("}}}}"+authorRepository.findAll().iterator().hasNext());
 
         return "authors/list";
     }
