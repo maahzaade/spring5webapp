@@ -17,6 +17,10 @@ public class SfgDiApplication {
 
         System.out.println(greeting);
 
+        I18nController i18nController = (I18nController) ctx.getBean("i18nController");
+
+        System.out.println(i18nController.SayHello());
+
         System.out.println("----------- Primary Bean");
         PrimaryGreetingController primaryGreetingController = (PrimaryGreetingController) ctx.getBean("primaryGreetingController");
 
